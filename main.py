@@ -17,11 +17,8 @@ class ApartmentSettlement:
 
     @property
     def remaining_amount(self) -> float:
-        return max(
-            0.0,
-            self.bills_total + self.rents_total
-            - self.transfers_total
-        )
+        total = self.bills_total + self.rents_total
+        return round(max(0.0, total - self.transfers_total), 2)
 
 
 class Parameters(BaseModel):
