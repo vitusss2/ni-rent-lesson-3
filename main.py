@@ -1,7 +1,24 @@
 from pydantic import BaseModel
 from typing import Dict, List
+from dataclasses import dataclass
 
 import json
+
+
+@dataclass
+class ApartmentSettlement:
+    settlement_id: int
+    apartment_id: int
+    month: int
+    year: int
+    bills_total: float
+    rents_total: float
+    transfers_total: float = 0.0
+
+    @property
+    def remaining_amount(self) -> float:
+        total = self.bills_total + self.rents_total
+        return round(max(0.0, total - self.transfers_total), 2)
 
 
 class Parameters(BaseModel):
