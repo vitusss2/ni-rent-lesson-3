@@ -122,7 +122,7 @@ if __name__ == '__main__':
     manager = Manager(parameters)
 
     for apartment in manager.apartments.values():
-        print(f"\n=== MIESZKANIE: {apartment.name} ===")
+        print(f"\n=== SZCZEGOLY MIESZKANIA: {apartment.name} ===")
         print(
             f"Adres: {apartment.location} | "
             f"Powierzchnia: {apartment.area_m2:.1f} m2"
