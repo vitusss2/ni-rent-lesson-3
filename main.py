@@ -92,7 +92,10 @@ class ApartmentSettlement(BaseModel):
 
     @property
     def remaining_pln(self) -> float:
-        return self.bills_total_pln + self.rent_total_pln - self.transfers_total_pln
+        return round(
+        self.bills_total_pln + self.rent_total_pln - self.transfers_total_pln,
+        2
+    )
 
 
 
