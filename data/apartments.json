@@ -1,3 +1,4 @@
+
 {
     "apart-polanka": {
         "key": "apart-polanka",
@@ -5,14 +6,18 @@
         "location": "Polanka 3a",
         "area_m2": 65,
         "rooms": {
-            "room-bigger": {
-                "name": "Bigger Room",
-                "area_m2": 20
-            },
-            "room-smaller": {
-                "name": "Smaller Room",
+            "room-1": {
+                "name": "Pokoj 1",
                 "area_m2": 15
+            },
+            "room-2": {
+                "name": "Pokoj 2",
+                "area_m2": 18
+            },
+            "room-3": {
+                "name": "Pokoj 3",
+                "area_m2": 20
             }
         }
-    } 
+    }
 }
