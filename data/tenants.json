@@ -4,7 +4,7 @@
         "apartment": "apart-polanka",
         "room": "room-1",
         "rent_pln": 1000,
-        "deposit_pln": 1000,
+        "deposit_pln": 2000,
         "date_agreement_from": "2026-01-01",
         "date_agreement_to": "2026-12-31"
     },
@@ -13,7 +13,7 @@
         "apartment": "apart-polanka",
         "room": "room-2",
         "rent_pln": 1100,
-        "deposit_pln": 1100,
+        "deposit_pln": 2200,
         "date_agreement_from": "2026-01-01",
         "date_agreement_to": "2026-12-31"
     },
@@ -22,7 +22,7 @@
         "apartment": "apart-polanka",
         "room": "room-3",
         "rent_pln": 1200,
-        "deposit_pln": 1200,
+        "deposit_pln": 2400,
         "date_agreement_from": "2026-01-01",
         "date_agreement_to": "2026-12-31"
     }
