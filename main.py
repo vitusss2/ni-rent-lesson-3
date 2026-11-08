@@ -128,14 +128,25 @@ if __name__ == '__main__':
             f"Powierzchnia: {apartment.area_m2:.1f} m2"
         )
         for room in apartment.rooms.values():
-            print('  ', room.name, room.area_m2)
-        
+            print(f"  Pokoj: {room.name} | {room.area_m2:.1f} m2")
         for bill in manager.bills:
             if bill.apartment == apartment.key:
-                print('  ', bill.amount_pln, bill.date_due, bill.settlement_year, bill.settlement_month, bill.type)
+                print(
+                    f"  Rachunek: {bill.type} | {bill.amount_pln:.2f} PLN | "
+                    f"Okres: {bill.settlement_year}-{bill.settlement_month:02d} | "
+                    f"Termin: {bill.date_due}"
+                )
 
-    for tenant in manager.tenants.values():
-        print(tenant.name, tenant.apartment, tenant.room, tenant.rent_pln, tenant.deposit_pln, tenant.date_agreement_from, tenant.date_agreement_to)
+    for tenant_key, tenant in manager.tenants.items():
+        print(f"\nNajemca: {tenant.name} | {tenant.apartment} | {tenant.room}")
+        print(
+            f"  Czynsz: {tenant.rent_pln:.2f} PLN | "
+            f"Kaucja: {tenant.deposit_pln:.2f} PLN | "
+            f"Umowa: {tenant.date_agreement_from} - {tenant.date_agreement_to}"
+        )
         for transfer in manager.transfers:
-            if transfer.tenant == tenant.name:
-                print('  ', transfer.amount_pln, transfer.date, transfer.settlement_year, transfer.settlement_month)
+            if transfer.tenant == tenant_key:
+                print(
+                    f"  Przelew: {transfer.amount_pln:.2f} PLN | {transfer.date} | "
+                    f"Okres: {transfer.settlement_year}-{transfer.settlement_month}"
+                )
